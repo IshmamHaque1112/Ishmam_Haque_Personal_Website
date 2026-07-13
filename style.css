@@ -127,15 +127,14 @@ main {
 }
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 1.25rem;
+    display: none;
+    padding: 0 1.25rem;
 }
 
-.accordion-item.open .accordion-content {
-  padding: 0.25rem 1.25rem 1.25rem;
+.accordion-item.open > .accordion-content {
+    display: block;
 }
+
 
 /* Nested accordion (projects) gets slightly darker panels for contrast */
 .nested-accordion .accordion-item {
