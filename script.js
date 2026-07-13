@@ -1,3 +1,17 @@
+function updateParents(content) {
+    let parent = content.parentElement;
+
+    while (parent) {
+        if (parent.classList.contains("accordion-item")) {
+            const panel = parent.querySelector(":scope > .accordion-content");
+            if (panel) {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+
+        parent = parent.parentElement;
+    }
+}
 // Accordion behavior for all .accordion groups (including nested ones)
 document.addEventListener("DOMContentLoaded", () => {
   const headers = document.querySelectorAll(".accordion-header");
@@ -6,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     header.addEventListener("click", () => {
       const item = header.parentElement;
       const content = header.nextElementSibling;
+      updateParents(content);
       const isOpen = item.classList.contains("open");
 
       if (isOpen) {
@@ -16,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("open");
         header.setAttribute("aria-expanded", "true");
         content.style.maxHeight = content.scrollHeight + "px";
+        updateParents(content);
       }
     });
   });
@@ -27,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const content = item.querySelector(":scope > .accordion-content");
       if (content) {
         content.style.maxHeight = content.scrollHeight + "px";
+        updateParents(content);
       }
     });
   });
@@ -37,3 +54,4 @@ document.addEventListener("DOMContentLoaded", () => {
     attributeFilter: ["class"],
   });
 });
+updateParents(content);
