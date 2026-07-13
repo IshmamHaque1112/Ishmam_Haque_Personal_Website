@@ -1,0 +1,246 @@
+/* ===========================================================
+   Ishmam Haque — Personal Site Styles
+   Palette:
+     Background : dark blue
+     Titles     : bright yellow
+     Subtitles  : green
+     Body text  : light red
+   Font: Times New Roman throughout
+=========================================================== */
+
+:root {
+  --color-bg: #0a1a3f;
+  --color-bg-panel: #0f2557;
+  --color-yellow: #ffd700;
+  --color-green: #4caf7d;
+  --color-light-red: #ff9e9e;
+  --color-border: #1e3a75;
+  font-family: "Times New Roman", Times, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-light-red);
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+.page-header {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.main-title {
+  color: var(--color-yellow);
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  color: var(--color-light-red);
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.page-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: var(--color-yellow);
+  font-size: 1.9rem;
+  border-bottom: 2px solid var(--color-green);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.sub-heading {
+  color: var(--color-green);
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ---------- Accordion ---------- */
+
+.accordion-item {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-panel);
+  margin-bottom: 0.75rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background-color: var(--color-bg-panel);
+  color: var(--color-green);
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background-color: #14306b;
+}
+
+.accordion-header:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: -2px;
+}
+
+.accordion-header::after {
+  content: "+";
+  color: var(--color-yellow);
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.accordion-header[aria-expanded="true"]::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.25rem;
+}
+
+.accordion-item.open .accordion-content {
+  padding: 0.25rem 1.25rem 1.25rem;
+}
+
+/* Nested accordion (projects) gets slightly darker panels for contrast */
+.nested-accordion .accordion-item {
+  background-color: #0c2050;
+}
+
+/* ---------- Bullet lists ---------- */
+
+.bullet-list {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.bullet-list li {
+  margin-bottom: 0.4rem;
+}
+
+.skills-list {
+  margin: 0.25rem 0 1rem;
+}
+
+/* ---------- Triptych (What I Bring) ---------- */
+
+.triptych {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-border);
+}
+
+.triptych-part {
+  flex: 1 1 30%;
+  background-color: var(--color-bg-panel);
+  padding: 1.25rem;
+  min-width: 200px;
+}
+
+.triptych-part p {
+  margin: 0;
+}
+
+/* ---------- Project links ---------- */
+
+.project-link {
+  color: var(--color-yellow);
+  text-decoration: underline;
+}
+
+.project-link:hover {
+  color: #fff2a8;
+}
+
+/* ---------- Experience blocks ---------- */
+
+.experience-block {
+  border-left: 3px solid var(--color-green);
+  padding-left: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.experience-title {
+  color: var(--color-green);
+  margin: 0 0 0.15rem;
+  font-size: 1.1rem;
+}
+
+.experience-dates {
+  font-style: italic;
+  margin: 0 0 0.5rem;
+  opacity: 0.85;
+}
+
+/* ---------- Footer ---------- */
+
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 2px solid var(--color-border);
+  color: var(--color-light-red);
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .triptych-part {
+    flex: 1 1 100%;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-content,
+  .accordion-header::after {
+    transition: none;
+  }
+}
