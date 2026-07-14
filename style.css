@@ -31,6 +31,86 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- Page layout (main content + sidebar) ---------- */
+
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+  flex: 0 0 240px;
+  width: 240px;
+  min-height: 100vh;
+  background-color: var(--color-yellow);
+  color: var(--color-bg);
+  font-family: "Bree Serif", "Times New Roman", Times, serif;
+  font-size: 11pt;
+  padding: 1.5rem 1.25rem;
+  border-left: 2px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.sidebar-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-bg-panel);
+  color: var(--color-yellow);
+  border: 2px dashed var(--color-bg);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11pt;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-nav ul {
+  list-style: disc;
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.sidebar-nav > ul > li {
+  margin-bottom: 0.85rem;
+}
+
+.sidebar-nav a {
+  color: var(--color-bg);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar-nav a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-subnav {
+  list-style: circle;
+  margin-top: 0.5rem;
+  padding-left: 1.1rem;
+}
+
+.sidebar-subnav li {
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-subnav a {
+  font-weight: normal;
+  font-size: 0.95em;
+}
+
 /* ---------- Header ---------- */
 
 .page-header {
@@ -232,6 +312,25 @@ main {
 
   .triptych-part {
     flex: 1 1 100%;
+  }
+
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: auto;
+    position: static;
+    border-left: none;
+    border-top: 2px solid var(--color-border);
+  }
+
+  .sidebar-photo {
+    aspect-ratio: 16 / 9;
+    max-width: 240px;
+    margin: 0 auto 1.5rem;
   }
 }
 
