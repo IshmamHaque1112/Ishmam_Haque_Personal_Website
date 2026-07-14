@@ -96,6 +96,12 @@ body {
   text-decoration: underline;
 }
 
+.sidebar-nav a.current {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 .sidebar-subnav {
   list-style: circle;
   margin-top: 0.5rem;
@@ -267,6 +273,46 @@ main {
 
 .project-link:hover {
   color: #fff2a8;
+}
+
+/* ---------- Project cards (Key Projects index page) ---------- */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.project-card {
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+}
+
+.project-card h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+}
+
+.project-card h3 a {
+  color: var(--color-yellow);
+  text-decoration: none;
+}
+
+.project-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.project-card-org {
+  color: var(--color-green);
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+.project-card p:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- Experience blocks ---------- */
