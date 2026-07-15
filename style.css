@@ -25,11 +25,37 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
   color: var(--color-light-red);
   font-family: "Times New Roman", Times, serif;
   line-height: 1.6;
 }
+
+/* ---------- Page background images ---------- */
+
+.page-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 600px) {
+  .page-bg {
+    background-attachment: scroll;
+  }
+}
+
+.bg-index { background-image: url('Index_site_background.jpg'); }
+.bg-key-projects { background-image: url('keyprojects_site_background.jpg'); }
+.bg-project-1 { background-image: url('Project1_site_background.jpg'); }
+.bg-project-2 { background-image: url('Project2_site_background.jpg'); }
+.bg-project-3 { background-image: url('Project3_site_background.jpg'); }
+.bg-project-4 { background-image: url('Project4_site_background.jpg'); }
+.bg-project-5 { background-image: url('Project5_site_background.jpg'); }
+.bg-project-6 { background-image: url('Project6_site_background.jpg'); }
+.bg-education { background-image: url('educationtechnicalexperience_site_background.jpg'); }
+.bg-non-technical { background-image: url('nontechnical_site_background.jpg'); }
+.bg-contact { background-image: url('contactinformation_site_background.jpg'); }
 
 /* ---------- Page layout (main content + sidebar) ---------- */
 
@@ -148,7 +174,11 @@ main {
 }
 
 .page-section {
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
   margin-bottom: 3rem;
+  border-radius: 4px;
 }
 
 .section-title {
@@ -230,8 +260,11 @@ main {
 /* ---------- Bullet lists ---------- */
 
 .bullet-list {
-  padding-left: 1.25rem;
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
   margin: 0.5rem 0;
+  border-radius: 4px;
 }
 
 .bullet-list li {
@@ -239,7 +272,11 @@ main {
 }
 
 .skills-list {
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
   margin: 0.25rem 0 1rem;
+  border-radius: 4px;
 }
 
 /* ---------- Triptych (What I Bring) ---------- */
@@ -258,6 +295,8 @@ main {
   background-color: var(--color-bg-panel);
   padding: 1.25rem;
   min-width: 200px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
 }
 
 .triptych-part p {
@@ -318,9 +357,12 @@ main {
 /* ---------- Experience blocks ---------- */
 
 .experience-block {
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-green);
-  padding-left: 1rem;
+  padding: 1rem 1.25rem;
   margin-bottom: 1.25rem;
+  border-radius: 4px;
 }
 
 .experience-title {
