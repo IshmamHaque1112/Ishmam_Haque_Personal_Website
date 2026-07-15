@@ -4,16 +4,17 @@
      Background : dark blue
      Titles     : bright yellow
      Subtitles  : green
-     Body text  : light red
+     Body text  : #00C6E0
+     Text boxes : #292929 (with transparency)
    Font: Times New Roman throughout
 =========================================================== */
 
 :root {
   --color-bg: #0a1a3f;
-  --color-bg-panel: #0f2557;
+  --color-bg-panel: rgba(41, 41, 41, 0.85);
   --color-yellow: #ffd700;
   --color-green: #4caf7d;
-  --color-light-red: #ff9e9e;
+  --color-text: #00C6E0;
   --color-border: #1e3a75;
   font-family: "Times New Roman", Times, serif;
 }
@@ -25,7 +26,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: var(--color-light-red);
+  color: var(--color-text);
   font-family: "Times New Roman", Times, serif;
   line-height: 1.6;
 }
@@ -156,13 +157,23 @@ body {
   font-size: 2.5rem;
   margin: 0 0 0.5rem 0;
   letter-spacing: 0.5px;
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .subtitle {
-  color: var(--color-light-red);
+  color: var(--color-text);
   font-size: 1.25rem;
   font-style: italic;
   margin: 0;
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 /* ---------- Layout ---------- */
@@ -185,14 +196,21 @@ main {
   color: var(--color-yellow);
   font-size: 1.9rem;
   border-bottom: 2px solid var(--color-green);
-  padding-bottom: 0.4rem;
   margin-bottom: 1.25rem;
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
 }
 
 .sub-heading {
   color: var(--color-green);
   font-size: 1.25rem;
   margin: 1.5rem 0 0.5rem;
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
 }
 
 /* ---------- Accordion ---------- */
@@ -222,7 +240,7 @@ main {
 }
 
 .accordion-header:hover {
-  background-color: #14306b;
+  background-color: rgba(20, 48, 107, 0.85);
 }
 
 .accordion-header:focus-visible {
@@ -254,7 +272,7 @@ main {
 
 /* Nested accordion (projects) gets slightly darker panels for contrast */
 .nested-accordion .accordion-item {
-  background-color: #0c2050;
+  background-color: rgba(12, 32, 80, 0.85);
 }
 
 /* ---------- Bullet lists ---------- */
@@ -383,7 +401,7 @@ main {
   text-align: center;
   padding: 1.5rem;
   border-top: 2px solid var(--color-border);
-  color: var(--color-light-red);
+  color: var(--color-text);
   font-size: 0.9rem;
 }
 
@@ -420,6 +438,64 @@ main {
     max-width: 240px;
     margin: 0 auto 1.5rem;
   }
+}
+
+/* ---------- Project Framework Styles ---------- */
+
+/* Style 1: Title textboxes for project framework */
+.framework-title {
+  color: var(--color-yellow);
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--color-bg-panel);
+  border: 2px solid var(--color-border);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+}
+
+/* Style 2: Non-title textboxes for project framework */
+.framework-text {
+  color: var(--color-text);
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1.25rem 1.5rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* Large photograph placeholder */
+.framework-photo-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(41, 41, 41, 0.6);
+  border: 2px dashed var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* Video link embedding placeholder */
+.framework-video-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(41, 41, 41, 0.6);
+  border: 2px dashed var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
 /* ---------- Reduced motion ---------- */
