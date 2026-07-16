@@ -23,4 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Curtain tabs functionality
+  document.querySelectorAll(".curtain-tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      const tabItem = tab.parentElement;
+      const isActive = tabItem.classList.contains("active");
+
+      // Close all curtain tabs
+      document.querySelectorAll(".curtain-tab-item").forEach(item => {
+        item.classList.remove("active");
+      });
+
+      // Open clicked tab if it wasn't already active
+      if (!isActive) {
+        tabItem.classList.add("active");
+      }
+    });
+  });
 });
