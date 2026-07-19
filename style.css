@@ -299,6 +299,59 @@ main {
   border-radius: 4px;
 }
 
+/* ---------- Interest cards (Interests) ---------- */
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.interest-card {
+  position: relative;
+  min-height: 180px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.interest-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 26, 63, 0.55);
+  z-index: 1;
+}
+
+.interest-card p {
+  position: relative;
+  z-index: 2;
+  color: var(--color-text);
+  background-color: var(--color-bg-panel);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Triptych (What I Bring) ---------- */
 
 .triptych {
@@ -408,6 +461,37 @@ main {
   font-style: italic;
   margin: 0 0 0.5rem;
   opacity: 0.85;
+}
+
+.experience-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.experience-list li {
+  margin-bottom: 0.4rem;
+}
+
+.experience-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Resume embed pages ---------- */
+
+.resume-embed {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0 1.25rem;
+  background-color: var(--color-bg-panel);
+}
+
+.resume-embed iframe {
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  border: none;
+  display: block;
 }
 
 /* ---------- Footer ---------- */
