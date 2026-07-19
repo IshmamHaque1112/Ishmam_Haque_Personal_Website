@@ -27,27 +27,25 @@
       <div class="project-summary">Designed three Java programs solving the knapsack problem using brute force, random search, and genetic algorithm approaches.</div>
 
       <!-- Framework Section 1 -->
-      <h3 class="framework-title">Section 1 Title</h3>
-      <div class="framework-text">Placeholder text for section 1. This text box provides detailed information about the first aspect of the project.</div>
-      <div class="framework-photo-placeholder">Placeholder for large photograph</div>
-      <div class="framework-video-placeholder">Placeholder for video link embedding</div>
-      <div class="framework-text">Placeholder text for section 1 continuation. Additional details about the project can be included here.</div>
+      <h3 class="framework-title">Putting it in the Bag</h3>
+      <img src="knapsack_image.jpg" alt="Knapsack" class="framework-photo">
+      <div class="framework-text">In my genetic algorithms class, I was assigned to handle the knapsack problem to handle sorting. The knapsack problem is about how many items from a set one can fit into a bag with a maximum value while taking into account the maximum weight space of the bag. I was asked to program a brute force solution, a solution that generates random samples, and a genetic algorithm solution. I managed to complete them in a timely manner.</div>
 
       <!-- Framework Section 2 -->
-      <h3 class="framework-title">Section 2 Title</h3>
-      <div class="framework-text">Placeholder text for section 2. This text box provides detailed information about the second aspect of the project.</div>
-      <div class="framework-photo-placeholder">Placeholder for large photograph</div>
-      <div class="framework-video-placeholder">Placeholder for video link embedding</div>
-      <div class="framework-text">Placeholder text for section 2 continuation. Additional details about the project can be included here.</div>
+      <h3 class="framework-title">Part 1: Every solution possible</h3>
+      <img src="brute_force_gif.gif" alt="Brute Force" class="framework-photo">
+      <div class="framework-text">In order to run a brute force solution, I had to first generate every solution possible. I did so by generating all permutations of the knapsack problem using a function. Then I removed those over the weight limit, and found the solution with the max value.</div>
 
       <!-- Framework Section 3 -->
-      <h3 class="framework-title">Section 3 Title</h3>
-      <div class="framework-text">Placeholder text for section 3. This text box provides detailed information about the third aspect of the project.</div>
-      <div class="framework-photo-placeholder">Placeholder for large photograph</div>
-      <div class="framework-video-placeholder">Placeholder for video link embedding</div>
-      <div class="framework-text">Placeholder text for section 3 continuation. Additional details about the project can be included here.</div>
+      <h3 class="framework-title">Part 2: Randomization</h3>
+      <div class="framework-text">This approach relied on the greedy algorithm approach. I generated 100 generations, 1000 members each. Throughout this process, it tracked which was the best cost solution at the time, and ultimately presented a final combination when the program came to an end.</div>
 
-      <p><a class="project-link" href="#" target="_blank" rel="noopener">[Placeholder link to repository or live demo]</a></p>
+      <!-- Framework Section 4 -->
+      <h3 class="framework-title">Part 3: Genetics</h3>
+      <img src="genetics_image.jpg" alt="Genetics" class="framework-photo">
+      <div class="framework-text">This was the solution that allowed me to demonstrate my understanding of genetic algorithms. In genetic algorithms, one generates a series of solutions and breeds the best solutions over many generations to get the best solutions possible. Likewise, I built on my random generation program and created something much more layered. Starting with one generation of 1000 solutions, I bred the next generation by selecting the best using a criteria from the current generation and breeding them. This process continued over a hundred generations until finally culminating in the best generation with optimal solutions.</div>
+
+      <p><a class="project-link" href="https://github.com/IshmamHaque1112/381Genetic" target="_blank" rel="noopener">https://github.com/IshmamHaque1112/381Genetic</a></p>
       <p><a href="key-projects.html">&larr; Back to Key Projects</a></p>
     </section>
   </main>
@@ -72,9 +70,6 @@
             <li><a href="project-1.html">Project 1: Store Simulation</a></li>
             <li><a href="project-2.html">Project 2: TCP Gaming Server</a></li>
             <li><a href="project-3.html" aria-current="page" class="current">Project 3: Genetic Knapsack Problems</a></li>
-            <li><a href="project-4.html">Project 4: Mushroom Poisoning Analysis</a></li>
-            <li><a href="project-5.html">Project 5: Setting Up an Entry Level Website</a></li>
-            <li><a href="project-6.html">Project 6: Restaurant Data Analysis</a></li>
           </ul>
         </li>
         <li><a href="education-technical-experience.html">Education and technical experience</a>
